@@ -28,6 +28,11 @@ public class Application {
 		return "/index";
 	}
 
+	@RequestMapping("/console")
+	public String console(){
+		return "/console";
+	}
+
 	@RequestMapping("/login")
 	public String login(){
 		return "/login";
@@ -41,7 +46,7 @@ public class Application {
 	@Bean
 	public ShiroFilterChainDefinition shiroFilterChainDefinition() {
 		DefaultShiroFilterChainDefinition chainDefinition = new DefaultShiroFilterChainDefinition();
-		chainDefinition.addPathDefinition("/console", "authc");
+//		chainDefinition.addPathDefinition("/console", "authc");
 
 		return chainDefinition;
 	}
